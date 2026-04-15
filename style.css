@@ -1,0 +1,256 @@
+:root {
+    --primary-blue: #1B2631;
+    --primary-text: #1f2a37;
+    --elegant-gold: #c9a24b;
+    --secondary-text: #6b7280;
+    --light-bg: #EAECEE;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 30px 20px;
+    color: #333;
+}
+
+.admin-panel {
+    background: var(--white);
+    padding: 12px 25px;
+    border-radius: 40px;
+    box-shadow: var(--shadow);
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 950px;
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.admin-panel h2 {
+    font-size: 0.9rem;
+    color: var(--primary-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 10px;
+}
+
+/* Cuadros de texto reducidos y estilizados */
+.admin-panel input {
+    padding: 8px 15px;
+    border: 1px solid #E5E8E8;
+    border-radius: 25px;
+    width: 150px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #FBFCFC;
+}
+
+.admin-panel input:focus {
+    border-color: var(--elegant-gold);
+    background-color: var(--white);
+    box-shadow: 0 0 0 4px rgba(184, 134, 11, 0.1);
+}
+
+/* Botón creativo y profesional */
+#btnDownload {
+    background: #2E4053;
+    color: var(--white);
+    border: none;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#btnDownload:hover {
+    background: var(--elegant-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+}
+
+#btnDownload:active {
+    transform: translateY(0);
+}
+
+/* Estilos del Certificado */
+#certificado {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #f9fafb;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+/* Formas Decorativas */
+.shape-tl {
+    position: absolute;
+    top: -80px;
+    left: -80px;
+    width: 250px;
+    height: 250px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.shape-tl::after {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 250px;
+    height: 250px;
+    border: 15px solid var(--elegant-gold);
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+.shape-right-curve {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-blue), var(--elegant-gold));
+}
+
+.cert-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 80px 60px 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.cert-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 58px;
+    letter-spacing: 12px;
+    color: var(--elegant-gold);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.cert-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 7px;
+    color: var(--elegant-gold);
+    margin-top: -5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.text-otorgado {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 35px;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--secondary-text);
+}
+
+#nombre {
+    font-family: 'Great Vibes', cursive;
+    font-size: 78px;
+    color: var(--elegant-gold);
+    margin: 5px 0;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.name-line {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--elegant-gold), transparent);
+    opacity: 0.4;
+    margin-bottom: 20px;
+}
+
+.text-logro {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--secondary-text);
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+#curso {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    color: var(--primary-text);
+    margin: 5px 0;
+    font-weight: 700;
+}
+
+.fecha-container {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--secondary-text);
+    font-weight: 400;
+}
+
+.signatures {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.sign-block {
+    text-align: center;
+    width: 200px;
+}
+
+.sign-line {
+    border-top: 1px solid var(--primary-text);
+    margin-bottom: 8px;
+    opacity: 0.6;
+}
+
+.sign-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--primary-text);
+    margin: 0;
+}
+
+.sign-role {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: var(--secondary-text);
+    margin: 0;
+    font-weight: 400;
+}
+
+@media print {
+    @page {
+        size: landscape;
+        margin: 0;
+    }
+    body { margin: 0; padding: 0; background: none; }
+    .admin-panel { display: none !important; }
+    .preview-area { padding: 0; }
+    #certificado { box-shadow: none; border: none; }
+}

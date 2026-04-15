@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Certificados</title>
+    <!-- Fuentes: Poppins, Montserrat para títulos y Great Vibes para el nombre -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Librería para generar el PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="admin-panel">
+        <h2>Configuración del Certificado</h2>
+        <input type="text" id="inputNombre" placeholder="Nombre del Alumno">
+        <input type="text" id="inputCurso" placeholder="Nombre del Curso">
+        <input type="date" id="inputFecha">
+        <button id="btnDownload">Descargar PDF</button>
+    </div>
+
+    <div class="preview-area">
+        <div id="certificado">
+            <!-- Elementos Decorativos -->
+            <div class="shape-tl"></div>
+            <div class="shape-right-curve"></div>
+
+            <div class="cert-content">
+                <header>
+                    <h1 class="cert-title">CERTIFICADO</h1>
+                    <p class="cert-subtitle">DE RECONOCIMIENTO</p>
+                </header>
+
+                <main>
+                    <p class="text-otorgado">Otorgado a:</p>
+                    <h2 id="nombre">Nombre del Alumno</h2>
+                    <div class="name-line"></div>
+                    <p class="text-logro">Por haber completado satisfactoriamente el curso de:</p>
+                    <h3 id="curso">Nombre del Curso</h3>
+                </main>
+
+                <footer>
+                    <p class="fecha-container">Emitido el <span id="fecha"></span></p>
+                    <div class="signatures">
+                        <div class="sign-block">
+                            <div class="sign-line"></div>
+                            <p class="sign-name">Firma del Instructor</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
